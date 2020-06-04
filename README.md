@@ -1,4 +1,4 @@
-# Web học tiếng Nhật online - Nhóm 7
+# Web học tiếng Nhật online - Nhóm 29
 ### 1. Thành viên nhóm:
 * Nguyễn Trí Hiếu - 20166110
 * Nguyễn Đình Sơn - 20163532
