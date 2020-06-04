@@ -1,0 +1,55 @@
+<div class="container-fluid test-box">
+  <h1> TEST </h1>
+  <h1> <%= @test.question %> </h1>
+  <div class="test_container container" num_question = "a">
+    <div class="previous">
+      <div class="image">
+        <img src="https://img.icons8.com/nolan/96/000000/double-left.png">
+      </div>
+    </div>
+    <div class="test">
+      <%= render 'showtestcard', t: @test %>
+    </div>
+    <div class="next">
+      <img src="https://img.icons8.com/nolan/96/000000/double-right.png">
+    </div>
+  </div>
+  
+</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script >
+  var correct_answer = $(".testcard").attr("value");
+  list_button = $(".testcard .answer input");
+  var url = window.location.href;   
+  var question = parseInt(url.split('/')[4]);
+  for(let i=0;i<list_button.length;i++){
+    // console.log(list_button.eq(i).attr("value"))
+    let answer = list_button.eq(i).attr("value")
+    if(answer == correct_answer) list_button.eq(i).addClass("correct");
+    else{list_button.eq(i).addClass("fail");}
+  }
+  $('.testcard .answer input').click(function () {
+    var answer = $(this).attr('value');
+    if(correct_answer == answer) $(this).css("background-color","green");
+    else{
+      $(this).css("background-color","red");
+      $(".correct").css("background-color","green");
+    }
+  });
+  $('.next').click(()=>{
+    url = "http://localhost:3000/tests/" + (question+1);
+    window.location.replace(url);
+  })
+  $('.previous').click(()=>{
+    url = "http://localhost:3000/tests/" + (question-1);
+    window.location.replace(url);
+  })
+</script>
+
+
+

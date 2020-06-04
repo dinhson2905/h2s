@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+$bgblue: #003399;
+$color_hover: #cc3333;
+
+.home-title{
+    color: $color_hover;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: 900px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: 50px;
+    
+}
+.all-title{
+    border-radius: 50%;
+    background-color: #F6CECE;
+    // margin-right: 28%;
+    margin-left: 35%;
+    height: 300px;
+    width: 40%;
+}
+.introduce{
+    margin-top: 80px;
+    margin-bottom: 120px;
+    margin-right: 25% !important;
+    width: 70% !important;
+    .row{
+        margin-right: 0px !important;
+    }
+    .card{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        height: 200px;
+        border: 2px solid $bgblue;
+        border-radius: 15px;
+        background-color: #D8F6CE;
+        
+        h5{
+            font-size: 30px;
+            font-weight: 600px;
+            color: $color_hover;
+        }
+        .card-text{
+            margin-bottom: 20px;
+        }
+        .try-button{
+            color: $bgblue;
+            border: 1px solid $bgblue;
+            font-size: 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .try-button:hover{
+            color: white;
+            background-color: $bgblue;
+        }
+    }
+}

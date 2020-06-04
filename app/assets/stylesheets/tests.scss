@@ -1,0 +1,63 @@
+ .test{
+    margin-bottom: 300px;
+}
+
+.testcard{
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
+.testcard .question{
+    background-color: pink;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 400px;
+    height: 200px;
+    font-size: 120px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+.test .answer input{
+    font-size: 20px;
+    width: 100px;
+}
+
+.test_container{
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    padding-top: 10%;
+}
+
+.test_container .prev{
+    display: inline-block ;
+    position: absolute ;
+    left: 10% ;
+    top: 10% 
+}
+
+.test_container .test{
+    display: inline-block;
+}
+
+.test_container .next{
+    display: inline-block ;   
+    position: absolute ;
+    right: 10% ;
+    top: 10% 
+}
+
+.card-hira{
+    background-color: rgb(240, 196, 196);
+    text-align: center;
+    margin:10px 0px 10px 10px ;
+    
+}
+
+.card-hira .cach_viet{
+    height: 180px;
+    font-size: 100px ;
+}
+
+.card-hira .cach_doc{
+    font-size: 30px;
+}

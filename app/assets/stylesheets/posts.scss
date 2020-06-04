@@ -1,0 +1,19 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.postform {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+
+    h1{
+        text-align: center;
+        font-size: 50px;
+        color: rgb(107, 10, 10)
+    }
+    strong{
+        color:rgb(65, 14, 22);
+        font-size: 20px;
+         
+    }
+}

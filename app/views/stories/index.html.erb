@@ -1,0 +1,9 @@
+<% @stories.each do |story| %>
+    <div class="card story-box">
+        <div class="card-body">
+            <h5 class="card-title story-title"><%=link_to story.title, story %></h5>
+            <p class="card-text story-content"><%= story.content %></p>
+            <%=link_to "Đọc tiếp", story, class: "card-link" %>
+        </div>
+    </div>
+<% end %>

@@ -1,0 +1,42 @@
+// Place all the styles related to the hiraganas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$bgblue: #003399;
+$color_hover: #cc3333;
+h1{
+    text-align: center;
+}
+
+.card_index{
+    margin-left: 100px ;
+    margin-top: 30px;
+}
+
+.hira-flash{
+    background-color: rgb(240, 196, 196);
+    text-align: center;
+    margin-left: 30% !important;
+    width: 35% !important;
+
+}
+
+.card-hira .cach_viet{
+    height: 180px;
+    font-size: 100px ;
+}
+
+.card-hira .cach_doc{
+    font-size: 30px;
+}
+.alpha-flash{
+    border: 1px solid $bgblue;
+    margin: 20px 40px;
+    padding: 10px 20px;
+    color: $bgblue !important;
+    font-size: 20px;
+}
+.alpha-flash:hover{
+    color: white !important;
+    background-color: $bgblue;
+    text-decoration: none;
+}

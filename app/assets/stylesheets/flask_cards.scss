@@ -1,0 +1,37 @@
+// Place all the styles related to the Flask_cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.set_card_container .flask_card {
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 400px;
+    height: 200px;
+}
+
+.set_card_container .flask_card .flask_card_body{
+    height: 80%;
+    width: 100%;
+}
+
+.flask_card_body .cach_viet{
+    height: 70%;
+    font-size: 50px;
+    padding-top: 5%;
+}
+.flask_card_body .cach_doc{
+    display: inline-block;
+}
+
+.flask_card_body .nghia{
+    display: inline-block;
+}
+
+.flask_card_footer .trash_icon{
+    margin-top: 5px;
+    margin-right: 10px;
+    float: right;
+    display: inline-block;
+}

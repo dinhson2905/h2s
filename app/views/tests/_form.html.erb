@@ -1,0 +1,35 @@
+<%= form_with(model: tests, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_field :question %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_a %>
+    <%= form.text_field :answer_a %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_b %>
+    <%= form.text_field :answer_b %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_c %>
+    <%= form.text_field :answer_c %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_d %>
+    <%= form.text_field :answer_d %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correct_answer %>
+    <%= form.text_field :correct_answer %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

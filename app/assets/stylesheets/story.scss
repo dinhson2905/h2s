@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+$bgblue: #003399;
+$color_hover: #cc3333;
+
+.story-box{
+    width: 40%;
+    height: 200px;
+    margin-left: 30%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .card-body{
+        box-sizing: border-box;
+        border: 1px solid $bgblue;
+        .story-title a{
+            color: $color_hover;
+            font-size: 20px !important;
+            text-decoration: none;
+        }
+        .story-content{
+            color: $bgblue;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .card-link:hover{
+            text-decoration: none;
+            color: $color_hover;
+            background-color: white !important;
+        }
+    }
+}
+
+//show
+#story{
+    margin-left: 30%;
+    width: 40%;
+    .st-title{
+        margin-top: 40px;
+        color: $color_hover;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .st-content{
+        margin-top: 20px;
+        color: $bgblue;
+        font-size: 18px;
+        line-height: 30px !important;
+    }
+    .translate-part {
+        display: none;
+        p{
+            color: green;
+            font-size: 18px !important;
+            line-height: 30px !important;
+        }
+    }
+}

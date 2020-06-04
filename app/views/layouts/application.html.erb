@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to DHA</title>
+    <link rel="shortcut icon" href="https://cdn1.iconfinder.com/data/icons/seasons-nature-1/100/Sakura-512.png" type="image/x-icon" />
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+  </head>
+
+  <body>
+    <div><%= render 'layouts/header' %></div>
+    <div class="container-fluid background">
+    <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+    
+  </body>
+  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>

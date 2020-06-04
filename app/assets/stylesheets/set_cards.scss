@@ -1,0 +1,63 @@
+// Place all the styles related to the set_cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.set_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3%;
+}
+
+.set_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.set_card .title{
+    display: block;
+    width: 100%;
+    height: 80%;
+    padding-left: 10px;
+    background-color: rgb(81, 81, 126);
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    color:white;
+    font-size: 30px;
+}
+.set_card .trash_icon{
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+    display: inline-block;
+}
+
+.set_card_container {
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    padding-top: 5%;
+    height: 500px;
+}
+
+.set_card_container .prev{
+    display: inline-block ;
+    position: absolute ;
+    left: 10% ;
+    top: 10% 
+}
+
+.set_card_container .next{
+    display: inline-block ;   
+    position: absolute ;
+    right: 10% ;
+    top: 10% 
+}
+
+.set_card_container .flask_cards{
+    display: inline-block;
+}
+
+
+

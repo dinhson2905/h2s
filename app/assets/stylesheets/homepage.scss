@@ -1,0 +1,232 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$bgblue: #003399;
+$color_hover: #cc3333;
+.container-fluid{
+    padding: 0px !important;
+}
+header{
+    height: 80px;
+    background-color: $bgblue !important;
+    padding-left: 5% !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    a:hover{
+        background-color: $bgblue;
+    }
+    .nav_ele{
+        color: white !important;
+        padding-top: 12px;
+        font-size: 18px;
+        a{
+            text-decoration: none;
+            color: white !important;
+            padding-top: 10px !important;
+        }
+        a:hover{
+            background-color: $color_hover !important;
+        }
+    }
+    .nav_ele:hover{
+        background-color: $color_hover !important;
+        color: white !important;
+        border: none;
+        border-radius: 10px;
+    }
+    li{
+        margin-left: 10px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    i{
+        margin-right: 5px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        padding: 12px;
+        height: 50px;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important; 
+      }
+      
+      .dropdown-content {
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        display: none;
+        position: absolute;
+        font-size: 15px;
+        background-color:$color_hover;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 10px 14px;
+        z-index: 1;
+        top: 50px;
+        left: 0px;
+        font-weight: normal;
+           
+            a{
+                text-decoration: none;
+                color: white !important;
+                font-weight: 600;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            a:hover{
+                color: $bgblue;
+                background-color: transparent;
+            }
+      }
+      .dropdown:hover {
+        .dropdown-content{
+            width: 100%;
+            border-top-right-radius: 0px !important; 
+            display: block;
+            a:hover{
+                color: $bgblue !important;
+            }
+        }
+      }
+}
+
+
+
+.background{
+    margin-right: 0px;
+    padding-right: 0px;
+    background: url(cat4.gif) 15% 50px no-repeat, url(cat1.gif) 92% 450px no-repeat, url(cat1.1.gif) 40px 1560px no-repeat,linear-gradient(#E0F8F7, #F5A9F2) ;
+    background-size: 200px 200px, auto, auto, 100% auto;
+    position: relative;
+    min-height: 810px;
+}
+
+//Form đăng kí và đăng nhập user
+h2{
+    text-align: center;
+    color: $color_hover !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    margin-top: 30px !important;
+}
+.new_user, #edit_user{
+    width: 40%;
+    margin-left: 30%;
+    font-size: 15px;
+    label, em{
+        color: $bgblue;
+        margin-top: 10px;
+    }
+    
+    .actions { // Nút sign in, sign up
+        input{
+            background-color: $bgblue;
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 50px;
+        }
+        input:hover{
+            background-color: $color_hover;
+        }
+    }
+    
+    input{
+        height: 40px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid $bgblue;
+        border-radius: 8px;
+    }
+    #user_remember_me{
+        width: 5% !important;
+        height: 25px;
+    }
+   
+}
+
+.back-button{
+    font-size: 20px !important;
+    color: $bgblue !important;
+    margin-left: 30px;
+    width: 8%;
+    padding: 5px !important;
+    a{
+        text-decoration: none;
+        color: $bgblue !important;
+        margin-left: 10px;
+    }
+}
+.back-button:hover{
+    text-decoration: none;
+    border-radius: 10px !important;
+    color: white !important;
+    background-color: $bgblue;
+    a{
+        color: white !important;
+    }
+}
+
+img{
+    text-align: left;
+    float: left;
+    margin-right: 40px;
+    margin-top: 8px;
+}
+a:hover{
+    background-color: $bgblue !important;
+}
+.footer{
+    color: #5882FA;
+    line-height: 1em;
+    height: 80px;
+    position: relative;
+    top: 100%;
+    width: 100%;
+    background-color: #F8E0EC;
+    .p-2{
+        text-align: center;
+        p{
+            margin-bottom: 0px;
+            font-size: 13px !important;
+        }
+    }
+}
+
+.log-in{
+    margin-right: 5% !important;
+    height: 50px;
+}
+
+//Show thông tin user
+.user-infor{
+    text-align: center;
+    font-size: 20px;
+    h3{
+        color: $color_hover;
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    span{
+        color: $bgblue;
+        font-weight: bold;
+    }
+    #edit-user{
+        margin-top: 30px;
+        a{
+            text-decoration: none;
+            color: $bgblue;
+        }
+        a:hover{
+            color: $color_hover;
+            background-color: transparent !important;
+        }
+    }
+}
