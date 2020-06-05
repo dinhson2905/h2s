@@ -17,6 +17,9 @@
   <body>
     <div><%= render 'layouts/header' %></div>
     <div class="container-fluid background">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
     </div>
     <%= render 'layouts/footer' %>

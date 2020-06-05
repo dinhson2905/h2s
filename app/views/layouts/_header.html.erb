@@ -38,14 +38,14 @@
 
     <ul class="navbar-nav ml-md-auto log-in">
         <% if user_signed_in? %>
-        <li class="nav_ele nav-link user_icon"><i class="fas fa-user"></i>
-        <%= link_to current_user.name, infor_path  %></li>
-        <li style="color: white; margin-top: 12px">|</li>
-        <li class="nav_ele nav-link" ><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %></li>
+            <li class="nav_ele nav-link user_icon"><i class="fas fa-user"></i>
+            <%= link_to current_user.name, infor_path  %></li>
+            <li style="color: white; margin-top: 12px">|</li>
+            <li class="nav_ele nav-link" ><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %></li>
         <% else %>
-        <li class="nav_ele nav-link"><%= link_to "Đăng nhập", new_user_session_path %></li>
-        <li style="color: white; margin-top: 15px">|</li>
-        <li class="form nav_ele nav-link"><%= link_to "Đăng ký", new_user_registration_path %></li>
+            <li class="nav_ele nav-link"><%= link_to "Đăng nhập", new_user_session_path %></li>
+            <li style="color: white; margin-top: 15px">|</li>
+            <li class="form nav_ele nav-link"><%= link_to "Đăng ký", new_user_registration_path %></li>
         <% end %>
     </ul>
   
