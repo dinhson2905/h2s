@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   end
 
   resources :post_comments
-
   resources :posts 
 
   resources :hiraganas do
     resources :tests
   end
+
   devise_for :users
   resources :users
   resources :tests
