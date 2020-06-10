@@ -17,11 +17,12 @@ $(".button-delete").on("click", function(){
 })
 function myFunction(){
     var value1= $("#search-word").val();
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
     var value = `https://jisho.org/api/v1/search/words?keyword=${value1}`;
     console.log(value);
     $(".search-word").text(value1);
     $("#mean").html("");
-    fetch(value)
+    fetch(proxyurl+value)
   .then(response => {
     return response.json()
   })
