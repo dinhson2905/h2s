@@ -1,0 +1,36 @@
+<div class="postform">
+    <div style="background-color:#e6f2ff;height:7px;"> </div>
+    <br>
+    <h1>Posts</h1>
+    <br>
+
+    <div>
+        <% @posts.each do |post| %>
+          <div style="margin-left:20px;margin-right:10px;background-color: #336600 ;border-radius:60px;height:60px;width:60px;padding-top:15px;padding-left:25px;float:left;" >
+            <strong > <%= post.user.id %><br></strong>
+          </div>
+          <div style="padding-left:30px;">
+            <strong> <%= post.user.name %><br></strong>
+            <i> <%= post.user.email %><br></i>
+            <i><%= post.created_at %><br></i><br>
+          </div>
+         <div style="padding-left:30px">
+               <p  style="margin-left:30px;font-size:15px; margin-right: 20px;"><%= post.post %><br></p>
+          </div>
+          <div style="margin-left:550px;">
+          <br>
+            <%= link_to 'Comment', post %> |
+            <%= link_to 'Edit', edit_post_path(post) %>  |
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+          <br>
+          <div style="background-color:#d6d6c2;height:8px;"> </div>
+          <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <% end %>
+    </div>
+
+
+    <br>
+
+    <%= link_to 'New Post', new_post_path %>
+</div>
