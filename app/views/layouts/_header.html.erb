@@ -1,0 +1,52 @@
+
+<header class="navbar navbar-expand-lg" >
+    <a href="/"><img src="https://www.freelogodesign.org/file/app/client/thumb/1651e026-7286-4d29-9e1b-6d4e10831664_200x200.png?1591685692289" alt="icon" style="width: 70px; height: 70px; margin : 0px" ></a>
+    <ul class="navbar-nav redirect">
+        <li class="nav_ele nav-link"><i class="fas fa-home"></i><%= link_to "Trang chủ", '/' %></li>
+        <li class="nav_ele nav-link"><i class="fas fa-language"></i><%= link_to "Từ điển", dict_path %></li>
+        
+        <li class="dropdown nav_ele nav-item">
+        <i class="fas fa-book-reader"></i>Bài học
+            <div class="dropdown-content">
+            <% if user_signed_in? %>
+            <%= link_to "Bảng chữ cái",hiraganas_path, class: "dropdown-item" %> </br>
+            <%# <%= link_to "Đọc truyện",stories_path, class: "dropdown-item" %></br>
+            <%= link_to "Flask card",set_cards_path, class: "dropdown-item" %></br>
+            <% else %>
+            <%= link_to "Bảng chữ cái", new_user_session_path, class: "dropdown-item" %> </br>
+            <%# <%= link_to "Đọc truyện", new_user_session_path , class: "dropdown-item" %></br>
+            <%= link_to "Flask card",new_user_session_path, class: "dropdown-item" %></br>
+            <% end %>
+            </div>
+        </li>
+
+       
+        
+        <li class="dropdown nav_ele nav-item">
+        <i class="fas fa-graduation-cap"></i>Phương pháp học
+            <div class="dropdown-content">
+            <% if user_signed_in? %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",posts_path, class: "dropdown-item" %></br>
+            <% else %>
+            <%= link_to "Đăng bài",new_post_path, class: "dropdown-item" %> </br>
+            <%= link_to "Đọc bài",'/posts', class: "dropdown-item" %></br>
+            <% end %>
+        </div>
+    </li>
+    </ul>
+
+    <ul class="navbar-nav ml-md-auto log-in">
+        <% if user_signed_in? %>
+        <li class="nav_ele nav-link user_icon"><i class="fas fa-user"></i>
+        <%= link_to current_user.name, infor_path  %></li>
+        <li style="color: white; margin-top: 12px">|</li>
+        <li class="nav_ele nav-link" ><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li class="nav_ele nav-link"><%= link_to "Đăng nhập", new_user_session_path %></li>
+        <li style="color: white; margin-top: 15px">|</li>
+        <li class="form nav_ele nav-link"><%= link_to "Đăng ký", new_user_registration_path %></li>
+        <% end %>
+    </ul>
+  
+</header>

@@ -1,0 +1,44 @@
+<div class="search-box d-flex justify-content-center align-items-center">
+  <div class="p-2 search-bar"><input id="search-word" name="word" type="text" placeholder="JAPANESE / ENGLISH / ROMAJI" autofocus><i class=" button-delete fas fa-times"></i></div>
+  <div class="p-2"><button type="button" class="btn btn-primary" id="button-search" ><i class="fas fa-search"></i></button></div>
+</div>
+<div class="mean-content">
+<h3 class="search-word"></h3>
+<table id="mean">
+    
+</table>
+</div>
+
+
+<script>
+$("#button-search").on("click", myFunction);
+$(".button-delete").on("click", function(){
+  $("#search-word").val("");
+})
+function myFunction(){
+    var value1= $("#search-word").val();
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    var value = `https://jisho.org/api/v1/search/words?keyword=${value1}`;
+    console.log(value);
+    $(".search-word").text(value1);
+    $("#mean").html("");
+    fetch(proxyurl+value)
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+      var len = data.data.length;
+    for(var j=0; j<len; j++){
+        $("#mean").append(`<tr>
+            <td id="kanji">${data.data[j].japanese[0].word}</td>
+            <td>${data.data[j].japanese[0].reading}</td>
+            <td>${data.data[j].senses[0].english_definitions}</td>
+        </tr></hr>`)
+    }
+  })
+} 
+
+</script>
+
+
+

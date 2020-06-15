@@ -1,0 +1,27 @@
+<%= form_with(model: hiragana, local: true) do |form| %>
+  <% if hiragana.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hiragana.errors.count, "error") %> prohibited this hiragana from being saved:</h2>
+
+      <ul>
+        <% hiragana.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cachviet %>
+    <%= form.text_field :cachviet %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cachdoc %>
+    <%= form.text_field :cachdoc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
