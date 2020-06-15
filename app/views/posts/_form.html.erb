@@ -1,0 +1,24 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="field" style="text-align:center;">
+      <br><br>
+      <%= form.text_field :post ,class:"method_post" ,style:"padding-left:20px;padding-right:20px;width:70%;margin-left:25px;height:120px;border-radius:10px 10px;background-color:#ccccff" %>
+      <br><br>
+      <div class="actions"  >
+        <%= form.submit style:"height:50px;border-radius:10px 10px;background-color:#ff9900;"  %>
+      </div>
+    </div>
+<% end %>
+
