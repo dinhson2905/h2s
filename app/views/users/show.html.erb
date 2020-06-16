@@ -1,0 +1,12 @@
+        <section class="user-infor">
+            <h3>
+                <%= current_user.name %>
+            </h3>
+            <div id="infor-details">
+                <span>Email:</span> <%= current_user.email %><br>
+                <span>Phone:</span> <%= current_user.phone %>
+            </div>
+            <div id="edit-user">
+                <%= link_to "Chỉnh sửa thông tin", edit_user_registration_path %>
+            </div>
+        </section>
