@@ -1,0 +1,20 @@
+<h1>Flask Card</h1>
+
+<div class="container">
+  <h4>
+    <%= link_to  new_set_card_path, :action => 'go' do%>
+      <button type="button" class="btn btn-primary">Thêm bộ thẻ</button>
+    <% end %>
+  </h4>
+  <div class="row">
+    <% @set_cards.each do |set_card| %>
+      <%= link_to set_card, :action => 'go' do %>
+        <%= render 'card', set_card: set_card %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
